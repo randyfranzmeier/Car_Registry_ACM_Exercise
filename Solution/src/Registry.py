@@ -3,16 +3,10 @@ class Registry:
     def __init__(self, registry: list):
         self.registry = registry
 
-    def getRegistry(self):
-        return self.registry
-
-    def addCarToRegistry(self, car):
+    def add_car_to_registry(self, car):
         self.registry.append(car)
 
-    def setRegistry(self, registry: list):
-        self.registry = registry
-
-    def printRegisteredCars(self):
+    def print_registered_cars(self):
         print('Registered cars: ')
         for car in self.registry:
             print('Car: ' + car.make + ' ' + car.model)
@@ -21,7 +15,7 @@ class Registry:
             print('Expired tabs? ', car.hasExpiredTabs)
             print('------------------------------------')
 
-    def carsHaveExpiredTabs(self):
+    def cars_have_expired_tabs(self):
         for car in self.registry:
             if car.hasExpiredTabs:
                 return True
