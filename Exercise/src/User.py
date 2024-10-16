@@ -1,5 +1,5 @@
 #TODO add bugs in this file
-from Solution.src.Car import Car
+from Exercise.src.Car import Car
 
 
 class User:
