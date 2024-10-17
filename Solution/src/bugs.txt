@@ -1,0 +1,133 @@
+*Lets aim for 20 bugs (:
+------------------------------Bugs-Documentation------------------------------
+Example Bug #:
+  - Description
+  - Line
+  - Fix
+-------------------------------Car.py--------------------------------
+Bug 1:
+- useless getters and setters
+- lines 9-37
+- remove them
+
+Bug 2:
+- single underscore for constructor
+- line 2
+- add double underscore (dunder)
+
+Bug 3:
+- Missing self parameter to constructor
+- line 2
+- add keyword "self"
+-----------------------------every file-------------------------------------------------------------
+Bug 4:
+- Surprisingly, Python uses snake case. There shouldn't be capital letters in functions or variable names
+- throughout program
+- switch to camel_case
+
+  -------------------------------Registry.py--------------------------------
+Bug 5:
+- Indent error
+- line 3
+- indent properly
+
+Bug 6:
+- wrong function name
+- line 9
+- use print instead
+
+Bug 7:
+- Logic/readability error
+- line 11
+- Print make before model
+
+Bug 8:
+- wrong keyword
+- line 10
+- replace of with in to iterate through loop
+
+Bug 9:
+- Logic error: Doesn't consider all list elements
+- line 19,20, and 21
+- flip false and true, and get rid of not
+
+
+  -------------------------------Main.py--------------------------------
+  Bug 10:
+  - from/import path error
+  - line 2
+  - prepend with "Exercise"
+
+  Bug 11:
+  - input isn't sanitized to make everything else lowercase or uppercase
+  - line 6
+  - add "to lower" function to input statement
+
+  Bug 12:
+  - wrong syntax
+  - line 7
+  - None static method, should pass variable into len() instead of .len()
+
+  Bug 13:
+  - missing colon
+  - line 16
+  - add colon
+
+  Bug 14:
+  - Improper and unnecessary input conversion with "string()"
+  - line 24
+  - Eliminate string() conversion
+
+  Bug 15:
+  - Missing parameter False
+  - line 34
+  - add parameter False
+
+  Bug 16:
+  - year should be cast to an int
+  - line 43
+  - wrap input with int()
+
+  Bug 17:
+  - improper syntax "catch"
+  - line 48
+  - replace with "except"
+
+  Bug 18:
+  - nubers is incorrect
+  - line 56
+  - fix spelling to numbers
+
+  Bug 19:
+  - Missing else clause for special characters
+  - line 62
+  - add an else clause and return false if it reaches it
+
+  Bug 20:
+  - printing instead of returning vin number
+  - line 69
+  - return vin
+
+  Bug 21:
+  - wrong function call
+  - line 77
+  - call get_user_model
+
+  Bug 22:
+  - wrong keyword "new"
+  - line 80
+  - eradicate it
+
+  Bug 23:
+  - assigning function to car instead of calling it
+  - line 96
+
+  Bug 24:
+  - logic error
+  - line 99
+  - add not to input
+
+  Bug 25:
+  - non-static function call (need object)
+  - line 107
+  - create main object and use it to call start_program()
