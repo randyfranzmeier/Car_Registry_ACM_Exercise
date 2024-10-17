@@ -1,28 +1,21 @@
-#TODO add bugs in this file
 class Registry:
     def __init__(self, registry: list):
-        self.registry = registry
+    self.registry = registry
 
-    def getRegistry(self):
-        return self.registry
-
-    def addCarToRegistry(self, car):
+    def add_car_to_registry(self, car):
         self.registry.append(car)
 
-    def setRegistry(self, registry: list):
-        self.registry = registry
-
-    def printRegisteredCars(self):
-        print('Registered cars: ')
-        for car in self.registry:
-            print('Car: ' + car.make + ' ' + car.model)
+    def print_registered_cars(self):
+        printf('Registered cars: ')
+        for car of self.registry:
+            print('Car: ' + car.model + ' ' + car.make)
             print('Year: ', car.year)
             print('Vin: ', car.VIN)
             print('Expired tabs? ', car.hasExpiredTabs)
             print('------------------------------------')
 
-    def carsHaveExpiredTabs(self):
+    def cars_have_expired_tabs(self):
         for car in self.registry:
-            if car.hasExpiredTabs:
-                return True
-        return False
+            if not(car.hasExpiredTabs):
+                return False
+        return True

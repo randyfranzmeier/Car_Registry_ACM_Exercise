@@ -1,11 +1,10 @@
-#TODO add bugs in this file
-from Solution.src.Registry import Registry
-from Solution.src.Car import Car
+from Exercise.src.Registry import Registry
+from src.Car import Car
 
 def get_user_bool_input(prompt):
     while True:
-        expired_tabs = input(prompt).lower()
-        if len(expired_tabs) == 1:
+        expired_tabs = input(prompt)
+        if expired_tabs.len() == 1:
             if expired_tabs == 'y':
                 return True
             elif expired_tabs == 'n':
@@ -14,7 +13,7 @@ def get_user_bool_input(prompt):
 
 
 def is_valid_make_or_model(input, is_make):
-    for char in input:
+    for char in input
         if not (char.isalpha()) and is_make:
             return False
     return True
@@ -22,7 +21,7 @@ def is_valid_make_or_model(input, is_make):
 
 def get_user_make():
     while True:
-        make = input('Please enter your cars make (eg. Honda): ')
+        make = string(input('Please enter your cars make (eg. Honda): '))
         if is_valid_make_or_model(make, True):
             return make
         else:
@@ -32,7 +31,7 @@ def get_user_make():
 def get_user_model():
     while True:
         model = input('Please enter your cars model (eg. Civic): ')
-        if is_valid_make_or_model(model, False):
+        if is_valid_make_or_model(model):
             return model
         else:
             print('invalid input. Try again.')
@@ -41,12 +40,12 @@ def get_user_model():
 def get_user_year():
     while True:
         try:
-            year = int(input('Please enter your cars year: '))
+            year = input('Please enter your cars year: ')
             if year > 2025 or year < 1900:
                 print('invalid year. Please enter a year from 1901-2025')
             else:
                 return year
-        except:
+        catch:
             print("Invalid input. Please try again.")
 
 
@@ -54,22 +53,20 @@ def is_valid_vin(VIN):
     if len(VIN) == 0:
         return False
 
-    letters, numbers = 0, 0
+    letters, nubers = 0, 0
     for char in VIN:
         if char.isalpha():
             letters += 1
         elif char.isdigit():
-            numbers += 1
-        else:
-            return False #invalid
-    return letters == 5 and numbers == 5
+            nubers += 1
+    return letters == 5 and nubers == 5
 
 
 def get_user_vin():
     while True:
         vin = input('Please enter your cars VIN \nA VIN is a sequence of 5 letters and 5 numbers: ')
         if is_valid_vin(vin):
-            return vin
+            print(vin)
         else:
             print('Invalid input. Try again.')
 
@@ -77,10 +74,10 @@ def get_user_vin():
 def get_user_car_options():
     vin = get_user_vin()
     make = get_user_make()
-    model = get_user_model()
+    model = get_user_make()
     year = get_user_year()
     has_expired_tabs = get_user_bool_input('Does your car have expired tabs (yes-> y, no -> n): ')
-    return Car(vin, make, model, year, has_expired_tabs)
+    return new Car(vin, make, model, year, has_expired_tabs)
 
 
 def print_welcome_message():
@@ -96,10 +93,10 @@ class Main:
         print_welcome_message()
 
         while True:
-            car = get_user_car_options()
+            car = get_user_car_options
             registry.add_car_to_registry(car)
             registry.print_registered_cars()
-            if not(get_user_bool_input('Register more cars? (yes -> y, no -> n): ')):
+            if get_user_bool_input('Register more cars? (yes -> y, no -> n): '):
                 break
 
         print('Thanks for registering your cool cars!')
@@ -107,6 +104,5 @@ class Main:
             print('Make sure to renew your tabs!')
 
 
-app = Main()
-app.start_program()
+start_program()
 
